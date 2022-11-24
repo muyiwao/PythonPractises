@@ -1,5 +1,4 @@
 # mymodule.py file
-
 def generate_full_name(firstname, lastname):
     return firstname + ' ' + lastname
 
@@ -25,15 +24,17 @@ print(generate_full_name('Muyiwa', 'Oladimeji'))
 #Import Functions from a Module and Renaming
 #During importing we can rename the name of the module.
 
-# main.py file
-#from mymodule import generate_full_name as fullname, sum_two_nums as total, person as p, gravity as g
+# mymodule.py file
+from mymodule import generate_full_name as fullname, sum_two_nums as total, person as p, gravity as g
 print(generate_full_name('Muyiwa', 'Oladimeji'))
-#print(total(1, 9))
-# mass = 100;
-# weight = mass * g
-#print(weight)
-#print(p)
-#print(p['firstname'])
+print(total(1, 9))
+mass = 100
+weight = mass * g
+print(weight)
+print(p)
+print(p['firstname'])
+
+
 #Import Built-in Modules
 #Like other programming languages we can also import modules by
 # importing the file/function using the key word import.
@@ -138,3 +139,16 @@ print(string.punctuation)   # !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
 #from random import random, randint
 print(random())   # it doesn't take any arguments; it returns a value between 0 and 0.9999
 print(randint(5, 20)) # it returns a random integer number between [5, 20] inclusive
+
+
+"""
+Output:
+Muyiwa Oladimeji
+Muyiwa Oladimeji
+10
+981.0
+{'firstname': 'Muyiwa', 'age': 250, 'country': 'United Kingdom', 'city': 'London'}
+Muyiwa
+
+Process finished with exit code 0
+"""
